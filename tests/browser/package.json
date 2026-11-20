@@ -1,0 +1,13 @@
+{
+  "name": "reviewdesk-browser-tests",
+  "private": true,
+  "description": "Optional Playwright tests for the Review Desk UI",
+  "license": "MIT",
+  "scripts": {
+    "test": "node run.js",
+    "screenshots": "node screenshots.js"
+  },
+  "dependencies": {
+    "playwright-core": "1.49.1"
+  }
+}
