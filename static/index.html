@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Review Desk</title>
+<link rel="stylesheet" href="/static/app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23356'/%3E%3Cpath d='M4 8l3 3 5-6' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <a href="/" class="brand" data-nav>Review Desk</a>
+  <span class="counts" id="counts"></span>
+  <button class="ghost" id="help-btn" title="Keyboard shortcuts (?)" aria-label="Keyboard shortcuts">?</button>
+  <nav class="topnav" aria-label="Sections">
+    <a href="/queue" data-nav data-view="queue" class="qnav" title="Review queue (Q)">Review <span class="qbadge" id="qcount" hidden></span></a>
+    <a href="/todo" data-nav data-view="todo" title="Your to-do list (Shift+T)">To do <span class="tbadge" id="tcount" hidden></span></a>
+    <a href="/" data-nav data-view="inbox">Inbox</a>
+    <a href="/projects" data-nav data-view="projects">Projects</a>
+    <a href="/new" data-nav data-view="new" class="newws" aria-label="New workstream" title="New workstream (Shift+N)">+<span class="wide-only"> New workstream</span></a>
+  </nav>
+</header>
+<main id="main" tabindex="-1"><p class="muted">Loading…</p></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="help">
+  <h2>Keyboard</h2>
+  <table class="keys">
+    <tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td>next / previous item</td></tr>
+    <tr><td><kbd>Enter</kbd> / <kbd>o</kbd></td><td>open item</td></tr>
+    <tr><td><kbd>/</kbd></td><td>search</td></tr>
+    <tr><td><kbd>1</kbd>…<kbd>9</kbd></td><td>toggle answer option (item page)</td></tr>
+    <tr><td><kbd>a</kbd></td><td>focus answer text</td></tr>
+    <tr><td><kbd>c</kbd></td><td>focus comment</td></tr>
+    <tr><td><kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Enter</kbd></td><td>submit the focused form</td></tr>
+    <tr><td><kbd>u</kbd> / <kbd>Esc</kbd></td><td>back to inbox</td></tr>
+    <tr><td><kbd>n</kbd> / <kbd>p</kbd></td><td>next / previous item (item page)</td></tr>
+    <tr><td colspan="2"><strong>Image viewer</strong></td></tr>
+    <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>previous / next image</td></tr>
+    <tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>zoom in / out (or two-finger scroll, pinch, mouse wheel)</td></tr>
+    <tr><td><kbd>0</kbd> / <kbd>f</kbd> · <kbd>1</kbd></td><td>fit to screen · 100 %</td></tr>
+    <tr><td>click-drag · touch drag</td><td>pan</td></tr>
+    <tr><td>double-click / double-tap</td><td>toggle fit ↔ 100 %</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>close viewer</td></tr>
+    <tr><td><kbd>Shift</kbd>+<kbd>T</kbd></td><td>to-do list (<kbd>u</kbd> undoes the last tick)</td></tr>
+    <tr><td colspan="2"><strong>Review queue</strong> (<kbd>q</kbd> opens it)</td></tr>
+    <tr><td><kbd>1</kbd>…<kbd>9</kbd></td><td>select options</td></tr>
+    <tr><td><kbd>Enter</kbd> · <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Enter</kbd> while typing</td><td>submit and go to the next</td></tr>
+    <tr><td><kbd>s</kbd> · swipe left</td><td>snooze (to the back of the queue)</td></tr>
+    <tr><td>swipe right</td><td>submit; with nothing picked, approve the recommended option</td></tr>
+    <tr><td><kbd>u</kbd></td><td>undo the last submit / approval / snooze</td></tr>
+    <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>previous / next card without answering</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>leave the queue</td></tr>
+    <tr><td><kbd>Shift</kbd>+<kbd>P</kbd></td><td>Projects rollup</td></tr>
+    <tr><td><kbd>Shift</kbd>+<kbd>N</kbd></td><td>new workstream</td></tr>
+  </table>
+  <form method="dialog"><button>Close</button></form>
+</dialog>
+<script src="/static/md.js"></script>
+<script src="/static/viewer.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

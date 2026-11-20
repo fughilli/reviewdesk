@@ -1,0 +1,16 @@
+# Runtime data: the SQLite database, uploads, backups, logs, pid files
+data/
+*.db
+*.db-wal
+*.db-shm
+*.log
+*.pid
+
+# Python / Node
+__pycache__/
+*.pyc
+node_modules/
+
+# Local scratch
+.env
+.DS_Store
